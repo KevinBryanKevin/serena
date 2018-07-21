@@ -8,22 +8,30 @@
 
 /* Begin PBXBuildFile section */
 		10D314AA210385B500A1627E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10D314A9210385B500A1627E /* AppDelegate.swift */; };
-		10D314AC210385B500A1627E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10D314AB210385B500A1627E /* ViewController.swift */; };
 		10D314AF210385B500A1627E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 10D314AD210385B500A1627E /* Main.storyboard */; };
 		10D314B2210385B500A1627E /* Serena.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 10D314B0210385B500A1627E /* Serena.xcdatamodeld */; };
 		10D314B4210385B800A1627E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 10D314B3210385B800A1627E /* Assets.xcassets */; };
 		10D314B7210385B800A1627E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 10D314B5210385B800A1627E /* LaunchScreen.storyboard */; };
+		10D314BF21038A2500A1627E /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10D314BE21038A2500A1627E /* LoginController.swift */; };
+		10D314C121038C5200A1627E /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10D314C021038C5200A1627E /* User.swift */; };
+		10E0473821039CDB00822460 /* QuestionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10E0473721039CDB00822460 /* QuestionController.swift */; };
+		6B36726333551FCD01279F12 /* Pods_Serena.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 61DFACEF08EF90AC880FE77D /* Pods_Serena.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0DEE8D0C0885D26D0A3A1480 /* Pods-Serena.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Serena.release.xcconfig"; path = "Pods/Target Support Files/Pods-Serena/Pods-Serena.release.xcconfig"; sourceTree = "<group>"; };
 		10D314A6210385B500A1627E /* Serena.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Serena.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		10D314A9210385B500A1627E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		10D314AB210385B500A1627E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		10D314AE210385B500A1627E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		10D314B1210385B500A1627E /* Serena.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Serena.xcdatamodel; sourceTree = "<group>"; };
 		10D314B3210385B800A1627E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		10D314B6210385B800A1627E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		10D314B8210385B800A1627E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		10D314BE21038A2500A1627E /* LoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
+		10D314C021038C5200A1627E /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		10E0473721039CDB00822460 /* QuestionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionController.swift; sourceTree = "<group>"; };
+		31DF1BD9FD2F093955943E99 /* Pods-Serena.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Serena.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Serena/Pods-Serena.debug.xcconfig"; sourceTree = "<group>"; };
+		61DFACEF08EF90AC880FE77D /* Pods_Serena.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Serena.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +39,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6B36726333551FCD01279F12 /* Pods_Serena.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +51,8 @@
 			children = (
 				10D314A8210385B500A1627E /* Serena */,
 				10D314A7210385B500A1627E /* Products */,
+				3C0F002C663B376B14831564 /* Pods */,
+				15620BF57992E324D187D241 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,8 +67,10 @@
 		10D314A8210385B500A1627E /* Serena */ = {
 			isa = PBXGroup;
 			children = (
+				10D314C421038D8A00A1627E /* Controller */,
+				10D314C321038D8200A1627E /* Views */,
+				10D314C221038D7200A1627E /* Models */,
 				10D314A9210385B500A1627E /* AppDelegate.swift */,
-				10D314AB210385B500A1627E /* ViewController.swift */,
 				10D314AD210385B500A1627E /* Main.storyboard */,
 				10D314B3210385B800A1627E /* Assets.xcassets */,
 				10D314B5210385B800A1627E /* LaunchScreen.storyboard */,
@@ -67,6 +80,47 @@
 			path = Serena;
 			sourceTree = "<group>";
 		};
+		10D314C221038D7200A1627E /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				10D314C021038C5200A1627E /* User.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		10D314C321038D8200A1627E /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		10D314C421038D8A00A1627E /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				10D314BE21038A2500A1627E /* LoginController.swift */,
+				10E0473721039CDB00822460 /* QuestionController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		15620BF57992E324D187D241 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				61DFACEF08EF90AC880FE77D /* Pods_Serena.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		3C0F002C663B376B14831564 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				31DF1BD9FD2F093955943E99 /* Pods-Serena.debug.xcconfig */,
+				0DEE8D0C0885D26D0A3A1480 /* Pods-Serena.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -74,9 +128,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 10D314BB210385B800A1627E /* Build configuration list for PBXNativeTarget "Serena" */;
 			buildPhases = (
+				36C8130BE32E91F4206B38CA /* [CP] Check Pods Manifest.lock */,
 				10D314A2210385B500A1627E /* Sources */,
 				10D314A3210385B500A1627E /* Frameworks */,
 				10D314A4210385B500A1627E /* Resources */,
+				2CAB0BB567A232742384BD64 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -133,13 +189,54 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		2CAB0BB567A232742384BD64 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Serena/Pods-Serena-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/SCLAlertView/SCLAlertView.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SCLAlertView.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Serena/Pods-Serena-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		36C8130BE32E91F4206B38CA /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Serena-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		10D314A2210385B500A1627E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				10D314AC210385B500A1627E /* ViewController.swift in Sources */,
+				10E0473821039CDB00822460 /* QuestionController.swift in Sources */,
+				10D314C121038C5200A1627E /* User.swift in Sources */,
 				10D314B2210385B500A1627E /* Serena.xcdatamodeld in Sources */,
+				10D314BF21038A2500A1627E /* LoginController.swift in Sources */,
 				10D314AA210385B500A1627E /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -282,6 +379,7 @@
 		};
 		10D314BC210385B800A1627E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 31DF1BD9FD2F093955943E99 /* Pods-Serena.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -299,6 +397,7 @@
 		};
 		10D314BD210385B800A1627E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0DEE8D0C0885D26D0A3A1480 /* Pods-Serena.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

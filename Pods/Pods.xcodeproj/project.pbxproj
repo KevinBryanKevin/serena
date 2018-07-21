@@ -1,0 +1,576 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		475F560DE899451464B499B5F3D6A975 /* SCLExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79976012D991BBCB570D7574B6552363 /* SCLExtensions.swift */; };
+		72CD1179F5B87D37792537DC6E7CD30D /* SCLAlertView-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CC16F7AD93F57AA9DD681ED020B8080 /* SCLAlertView-dummy.m */; };
+		7BC6A996B0FCDB01C23AFDC6160DE317 /* Pods-Serena-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 4A147900151ECB5EB9F3A88A06CC2B26 /* Pods-Serena-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9540AFA8CA65D6BF34146D61558A8FC5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A16F4CFC63FAC439D7A04994F579A03 /* Foundation.framework */; };
+		A276201A16DDFF279AE70A982E0C298F /* SCLAlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53D7C12624AB36573B17A345B5C28FFE /* SCLAlertView.swift */; };
+		AAFD5101A52BE0F9E69288E798C647F7 /* Pods-Serena-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 6854A3D6D8E9C5302A65238BF650DA4B /* Pods-Serena-dummy.m */; };
+		B7C6635B083B6B41E40223720FBE5A05 /* SCLAlertView-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 0455558A11C28325FCB8EE37AD233C19 /* SCLAlertView-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		EFBC24DFC90E0C1FA92A461A25A9786D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A16F4CFC63FAC439D7A04994F579A03 /* Foundation.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		0CEF71B4DC33393B5149AF1C35CBCC58 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D122CB7F98D705EBB76F7249A7255D01;
+			remoteInfo = SCLAlertView;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0455558A11C28325FCB8EE37AD233C19 /* SCLAlertView-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SCLAlertView-umbrella.h"; sourceTree = "<group>"; };
+		1B2E111A388DDCA4AA65A4732F633A42 /* SCLAlertView.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SCLAlertView.xcconfig; sourceTree = "<group>"; };
+		289BF7363D639BB5C04B29E70BA02379 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3A6F4C998D93CF0DC3E1EDEF1DCF29DC /* SCLAlertView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SCLAlertView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4A147900151ECB5EB9F3A88A06CC2B26 /* Pods-Serena-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Serena-umbrella.h"; sourceTree = "<group>"; };
+		53D7C12624AB36573B17A345B5C28FFE /* SCLAlertView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SCLAlertView.swift; path = SCLAlertView/SCLAlertView.swift; sourceTree = "<group>"; };
+		5A16F4CFC63FAC439D7A04994F579A03 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		6854A3D6D8E9C5302A65238BF650DA4B /* Pods-Serena-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Serena-dummy.m"; sourceTree = "<group>"; };
+		7649CB55E7175E764980D26669E5E27F /* Pods-Serena.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Serena.release.xcconfig"; sourceTree = "<group>"; };
+		79976012D991BBCB570D7574B6552363 /* SCLExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SCLExtensions.swift; path = SCLAlertView/SCLExtensions.swift; sourceTree = "<group>"; };
+		7B29FFE123CFB35F2DF48623D8A7D6C9 /* SCLAlertView-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SCLAlertView-prefix.pch"; sourceTree = "<group>"; };
+		7C4B6834B47C517B13851A5FFE3A809B /* Pods-Serena.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Serena.debug.xcconfig"; sourceTree = "<group>"; };
+		8CC16F7AD93F57AA9DD681ED020B8080 /* SCLAlertView-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SCLAlertView-dummy.m"; sourceTree = "<group>"; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		943D59431D3E81F2EE503F1F8C6E09A8 /* Pods-Serena-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Serena-acknowledgements.markdown"; sourceTree = "<group>"; };
+		9574B1C18AD79A30CACDA38FC9E781BE /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A1346751D48A3B1EB8D9F0F40D98B14F /* Pods-Serena.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-Serena.modulemap"; sourceTree = "<group>"; };
+		A6F19B49B31C4C6F9D78452615E5AE25 /* Pods_Serena.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Serena.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AF85EDA67668F2A87E05C94973FA07DC /* SCLAlertView.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = SCLAlertView.modulemap; sourceTree = "<group>"; };
+		DC661E57E6D2B9269154B9BE0161A77E /* Pods-Serena-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Serena-frameworks.sh"; sourceTree = "<group>"; };
+		EE0E2C205B27093E657558AC3EF1111D /* Pods-Serena-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Serena-acknowledgements.plist"; sourceTree = "<group>"; };
+		EF76ECB00AE28CCA52A042831F9C05F2 /* Pods-Serena-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Serena-resources.sh"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A314F75E00A1A9CA35698062E51851EA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EFBC24DFC90E0C1FA92A461A25A9786D /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DBFAF8728B0F6B7C4E095C547BDC7B24 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9540AFA8CA65D6BF34146D61558A8FC5 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0DE8EBADA34EAC0EE89775B973761A38 /* Pods-Serena */ = {
+			isa = PBXGroup;
+			children = (
+				289BF7363D639BB5C04B29E70BA02379 /* Info.plist */,
+				A1346751D48A3B1EB8D9F0F40D98B14F /* Pods-Serena.modulemap */,
+				943D59431D3E81F2EE503F1F8C6E09A8 /* Pods-Serena-acknowledgements.markdown */,
+				EE0E2C205B27093E657558AC3EF1111D /* Pods-Serena-acknowledgements.plist */,
+				6854A3D6D8E9C5302A65238BF650DA4B /* Pods-Serena-dummy.m */,
+				DC661E57E6D2B9269154B9BE0161A77E /* Pods-Serena-frameworks.sh */,
+				EF76ECB00AE28CCA52A042831F9C05F2 /* Pods-Serena-resources.sh */,
+				4A147900151ECB5EB9F3A88A06CC2B26 /* Pods-Serena-umbrella.h */,
+				7C4B6834B47C517B13851A5FFE3A809B /* Pods-Serena.debug.xcconfig */,
+				7649CB55E7175E764980D26669E5E27F /* Pods-Serena.release.xcconfig */,
+			);
+			name = "Pods-Serena";
+			path = "Target Support Files/Pods-Serena";
+			sourceTree = "<group>";
+		};
+		21236440975E0D8924F5FBFD0C9D1478 /* SCLAlertView */ = {
+			isa = PBXGroup;
+			children = (
+				53D7C12624AB36573B17A345B5C28FFE /* SCLAlertView.swift */,
+				79976012D991BBCB570D7574B6552363 /* SCLExtensions.swift */,
+				261B10EE7D4B771695C1B274A158CD5B /* Support Files */,
+			);
+			path = SCLAlertView;
+			sourceTree = "<group>";
+		};
+		261B10EE7D4B771695C1B274A158CD5B /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				9574B1C18AD79A30CACDA38FC9E781BE /* Info.plist */,
+				AF85EDA67668F2A87E05C94973FA07DC /* SCLAlertView.modulemap */,
+				1B2E111A388DDCA4AA65A4732F633A42 /* SCLAlertView.xcconfig */,
+				8CC16F7AD93F57AA9DD681ED020B8080 /* SCLAlertView-dummy.m */,
+				7B29FFE123CFB35F2DF48623D8A7D6C9 /* SCLAlertView-prefix.pch */,
+				0455558A11C28325FCB8EE37AD233C19 /* SCLAlertView-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/SCLAlertView";
+			sourceTree = "<group>";
+		};
+		37F397FDAE5AC64E432A2544AFD701CB /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				0DE8EBADA34EAC0EE89775B973761A38 /* Pods-Serena */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		5E0D919E635D23B70123790B8308F8EF /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				5A16F4CFC63FAC439D7A04994F579A03 /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		68AA3002EF6265B7E785EC76A46662C4 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A6F19B49B31C4C6F9D78452615E5AE25 /* Pods_Serena.framework */,
+				3A6F4C998D93CF0DC3E1EDEF1DCF29DC /* SCLAlertView.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		7DB346D0F39D3F0E887471402A8071AB = {
+			isa = PBXGroup;
+			children = (
+				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
+				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
+				CE1D7C96A3A3C0CED68FBC36DB57C4C4 /* Pods */,
+				68AA3002EF6265B7E785EC76A46662C4 /* Products */,
+				37F397FDAE5AC64E432A2544AFD701CB /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5E0D919E635D23B70123790B8308F8EF /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CE1D7C96A3A3C0CED68FBC36DB57C4C4 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				21236440975E0D8924F5FBFD0C9D1478 /* SCLAlertView */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		6F513A13F706142AC0D84889C0CD5294 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7BC6A996B0FCDB01C23AFDC6160DE317 /* Pods-Serena-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		780450D8D495D94200995680CE0FFC25 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B7C6635B083B6B41E40223720FBE5A05 /* SCLAlertView-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		D122CB7F98D705EBB76F7249A7255D01 /* SCLAlertView */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FCC449B212D2C5F7998D0F1C66F00B2B /* Build configuration list for PBXNativeTarget "SCLAlertView" */;
+			buildPhases = (
+				00F1E5783EE95625F2B4B650A00C7C9C /* Sources */,
+				DBFAF8728B0F6B7C4E095C547BDC7B24 /* Frameworks */,
+				780450D8D495D94200995680CE0FFC25 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SCLAlertView;
+			productName = SCLAlertView;
+			productReference = 3A6F4C998D93CF0DC3E1EDEF1DCF29DC /* SCLAlertView.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		E842483D183910D6B97B0DC571284442 /* Pods-Serena */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5C5F314F8C05AAD30E2515D842E83CDB /* Build configuration list for PBXNativeTarget "Pods-Serena" */;
+			buildPhases = (
+				569734A899B73671A171CBCE736B310A /* Sources */,
+				A314F75E00A1A9CA35698062E51851EA /* Frameworks */,
+				6F513A13F706142AC0D84889C0CD5294 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				689786B46E96FC53186F288BBC813B72 /* PBXTargetDependency */,
+			);
+			name = "Pods-Serena";
+			productName = "Pods-Serena";
+			productReference = A6F19B49B31C4C6F9D78452615E5AE25 /* Pods_Serena.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0930;
+				LastUpgradeCheck = 0940;
+			};
+			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
+			productRefGroup = 68AA3002EF6265B7E785EC76A46662C4 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				E842483D183910D6B97B0DC571284442 /* Pods-Serena */,
+				D122CB7F98D705EBB76F7249A7255D01 /* SCLAlertView */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		00F1E5783EE95625F2B4B650A00C7C9C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				72CD1179F5B87D37792537DC6E7CD30D /* SCLAlertView-dummy.m in Sources */,
+				A276201A16DDFF279AE70A982E0C298F /* SCLAlertView.swift in Sources */,
+				475F560DE899451464B499B5F3D6A975 /* SCLExtensions.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		569734A899B73671A171CBCE736B310A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AAFD5101A52BE0F9E69288E798C647F7 /* Pods-Serena-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		689786B46E96FC53186F288BBC813B72 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = SCLAlertView;
+			target = D122CB7F98D705EBB76F7249A7255D01 /* SCLAlertView */;
+			targetProxy = 0CEF71B4DC33393B5149AF1C35CBCC58 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		5DC0083F57E9AB706B46C5B5D73B38D8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_ALLOWED = NO;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		627CFB8F0EFE464EB2EB3A6BBB0FAA4D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1B2E111A388DDCA4AA65A4732F633A42 /* SCLAlertView.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/SCLAlertView/SCLAlertView-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SCLAlertView/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/SCLAlertView/SCLAlertView.modulemap";
+				PRODUCT_MODULE_NAME = SCLAlertView;
+				PRODUCT_NAME = SCLAlertView;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		70C4973049919F06881532E8F1116D3A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7C4B6834B47C517B13851A5FFE3A809B /* Pods-Serena.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-Serena/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Serena/Pods-Serena.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		987446BFC2E84CF794F161E782033309 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7649CB55E7175E764980D26669E5E27F /* Pods-Serena.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-Serena/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Serena/Pods-Serena.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		9EC249AF83FBF2357AA11EB45C406846 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1B2E111A388DDCA4AA65A4732F633A42 /* SCLAlertView.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/SCLAlertView/SCLAlertView-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SCLAlertView/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/SCLAlertView/SCLAlertView.modulemap";
+				PRODUCT_MODULE_NAME = SCLAlertView;
+				PRODUCT_NAME = SCLAlertView;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		AEEA80476F98EB645C4DD53EB2BB6D88 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_ALLOWED = NO;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5DC0083F57E9AB706B46C5B5D73B38D8 /* Debug */,
+				AEEA80476F98EB645C4DD53EB2BB6D88 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5C5F314F8C05AAD30E2515D842E83CDB /* Build configuration list for PBXNativeTarget "Pods-Serena" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				70C4973049919F06881532E8F1116D3A /* Debug */,
+				987446BFC2E84CF794F161E782033309 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FCC449B212D2C5F7998D0F1C66F00B2B /* Build configuration list for PBXNativeTarget "SCLAlertView" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				627CFB8F0EFE464EB2EB3A6BBB0FAA4D /* Debug */,
+				9EC249AF83FBF2357AA11EB45C406846 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+}
