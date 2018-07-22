@@ -6,6 +6,6 @@ target 'Serena' do
   use_frameworks!
 
   # Pods for Serena
-  pod 'SCLAlertView'
+  pod 'SCLAlertView', :git => 'https://github.com/vikmeup/SCLAlertView-Swift.git'
 
 end
