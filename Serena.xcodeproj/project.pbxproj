@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1072085F2104D79500CAA33F /* NewsItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1072085E2104D79500CAA33F /* NewsItem.swift */; };
 		10D314AA210385B500A1627E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10D314A9210385B500A1627E /* AppDelegate.swift */; };
 		10D314AF210385B500A1627E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 10D314AD210385B500A1627E /* Main.storyboard */; };
 		10D314B2210385B500A1627E /* Serena.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 10D314B0210385B500A1627E /* Serena.xcdatamodeld */; };
@@ -20,6 +21,7 @@
 
 /* Begin PBXFileReference section */
 		0DEE8D0C0885D26D0A3A1480 /* Pods-Serena.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Serena.release.xcconfig"; path = "Pods/Target Support Files/Pods-Serena/Pods-Serena.release.xcconfig"; sourceTree = "<group>"; };
+		1072085E2104D79500CAA33F /* NewsItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsItem.swift; sourceTree = "<group>"; };
 		10D314A6210385B500A1627E /* Serena.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Serena.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		10D314A9210385B500A1627E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		10D314AE210385B500A1627E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -84,6 +86,7 @@
 			isa = PBXGroup;
 			children = (
 				10D314C021038C5200A1627E /* User.swift */,
+				1072085E2104D79500CAA33F /* NewsItem.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -235,6 +238,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				10E0473821039CDB00822460 /* QuestionController.swift in Sources */,
+				1072085F2104D79500CAA33F /* NewsItem.swift in Sources */,
 				10D314C121038C5200A1627E /* User.swift in Sources */,
 				10D314B2210385B500A1627E /* Serena.xcdatamodeld in Sources */,
 				10D314BF21038A2500A1627E /* LoginController.swift in Sources */,
