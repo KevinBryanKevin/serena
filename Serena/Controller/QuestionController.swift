@@ -21,6 +21,7 @@ class QuestionController: UIViewController {
         // let's look at the rank of the orignal and do something fancy
         // let's just return the first 4
         // let's add a joke one and return that sometimes
+        // write some code.
         return (originals[0], originals[1], originals[2], originals[3])
     }
     
