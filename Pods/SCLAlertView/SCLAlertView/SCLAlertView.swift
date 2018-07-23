@@ -812,7 +812,7 @@ open class SCLAlertView: UIViewController {
             viewText.text = subTitle
             // Adjust text view size, if necessary
             let str = subTitle as NSString
-            let attr = [NSAttributedStringKey.font:viewText.font ?? UIFont()]
+            let attr = [NSFontAttributeName:viewText.font ?? UIFont()]
             let sz = CGSize(width: subViewsWidth, height:90)
             let r = str.boundingRect(with: sz, options: NSStringDrawingOptions.usesLineFragmentOrigin, attributes:attr, context:nil)
             let ht = ceil(r.size.height)
