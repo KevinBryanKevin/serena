@@ -21,6 +21,7 @@ class QuestionController: UIViewController {
         // let's look at the rank of the orignal and do something fancy
         // let's just return the first 4
         // let's add a joke one and return that sometimes
+//<<<<<<< HEAD
         
         var mySet: Set = [0];
         mySet.removeFirst()
@@ -37,6 +38,10 @@ class QuestionController: UIViewController {
         }
         print(numbers)
         return (originals[numbers[0]], originals[numbers[1]], originals[numbers[2]], originals[numbers[3]])
+//=======
+        /* write some code.
+        return (originals[0], originals[1], originals[2], originals[3])
+>>>>>>> a5f9d4676bfa83d8ce270aaedbef1cc812991d2d*/
     }
     
     override func viewDidLoad() {
