@@ -34,15 +34,15 @@ class QuestionController: UIViewController {
         let button = sender as! UIButton
         if let correct = self.correctTag {
             if button.tag == correct {
-                SCLAlertView().showSuccess("Great job! You're a news genius!")
-                
+                SCLAlertView().showSuccess("Correct!", subTitle: "Great job! You're a genius :)")
+            
                 let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
                 let nextViewController = storyBoard.instantiateViewController(withIdentifier: "CorrectViewController") as! CorrectViewController
                 
                 nextViewController.item = self.correctItem
                  self.navigationController?.pushViewController(nextViewController, animated: true)
             } else {
-                SCLAlertView().showError("That's not the right answer")
+               SCLAlertView().showError("Incorrect", subTitle: "Oops! That's not the trending answer.")
             }
             
         }
@@ -58,9 +58,8 @@ class QuestionController: UIViewController {
             let (item1, item2, item3, item4) = self.getChoices(originals: news)
             
             var maxItem: NewsItem = item1
-            self.correctTag = 0
             for (tag, item) in [item1, item2, item3, item4].enumerated() {
-                if (item.rankint > maxItem.rankint) {
+                if (item.rankint >= maxItem.rankint) {
                     maxItem = item
                     self.correctTag = tag
                     self.correctItem = item

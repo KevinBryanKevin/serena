@@ -130,12 +130,11 @@ alertView.showInfo("Custom icon", subTitle: "This is a nice alert with a custom 
 ```swift
 // Add a text field
 let alert = SCLAlertView()
-let txt = alert.addTextField("Enter your name")
+let txt = alert.addTextField(title:"Enter your name")
 alert.addButton("Show Name") {
-    print("Text value: \(txt.text)")
+    println("Text value: \(txt.text)")
 }
 alert.showEdit("Edit View", subTitle: "This alert view shows a text box")
-
 ```
 
 #### Use a custom subview instead of a subtitle

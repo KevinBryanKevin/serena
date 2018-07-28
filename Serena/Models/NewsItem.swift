@@ -11,7 +11,7 @@ import Foundation
 class NewsItemXMLDelegate : NSObject, XMLParserDelegate {
     
     var itemTag = "item"
-    var dictionaryKey: [String] = ["title", "ht:news_item_snippet", "ht:approx_traffic", "ht:news_item_url"]
+    var dictionaryKey: [String] = ["title", "ht:news_item_snippet", "ht:approx_traffic", "ht:news_item_url", "ht:picture"]
     
     
     // This is nil if I have no value to store.
@@ -60,6 +60,7 @@ class NewsItem {
     var rank : String
     var rankint : Int
     var url: String?
+    var pictureURL: URL?
     
     init(dict: [String: String]) {
         title = dict["title"] ?? "Unavailable"
@@ -67,6 +68,13 @@ class NewsItem {
         rank = dict["ht:approx_traffic"] ?? "Unavailable"
         rankint = Int(rank.dropLast().replacingOccurrences(of: ",", with: "")) ?? 0
         url = dict["ht:news_item_url"]
+        
+        if let urlString = dict["ht:picture"] {
+            // urlString always looks like //tN.gstatic.com/<ID>
+            if let url = URL(string: "https:\(urlString)") {
+                pictureURL = url
+            }
+        }
     }
     
     class func fetchTrendingNews(callback: @escaping (([NewsItem], String?) -> Void) ) {

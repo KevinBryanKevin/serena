@@ -18,25 +18,17 @@ PODS:
 
 DEPENDENCIES:
   - AFNetworking (~> 3.2)
-  - SCLAlertView (from `https://github.com/vikmeup/SCLAlertView-Swift.git`)
+  - SCLAlertView (~> 0.8)
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - AFNetworking
-
-EXTERNAL SOURCES:
-  SCLAlertView:
-    :git: https://github.com/vikmeup/SCLAlertView-Swift.git
-
-CHECKOUT OPTIONS:
-  SCLAlertView:
-    :commit: de579dc3d0b1217074796dcb5015bef01aaf8a1b
-    :git: https://github.com/vikmeup/SCLAlertView-Swift.git
+    - SCLAlertView
 
 SPEC CHECKSUMS:
   AFNetworking: b6f891fdfaed196b46c7a83cf209e09697b94057
   SCLAlertView: 6a77bb2edfc65e04dbe57725546cb4107a506b85
 
-PODFILE CHECKSUM: f66befc7eb099735ef9f7e0f03d70e7fada107fa
+PODFILE CHECKSUM: b98d2fd0a49ec613806b832c54feb205a3b70051
 
 COCOAPODS: 1.5.3
