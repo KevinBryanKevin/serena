@@ -50,11 +50,11 @@ class QuestionController: UIViewController {
             let (item1, item2, item3, item4) = self.getChoices(originals: news)
             
             var maxItem: NewsItem = item1
-            var correctTag = 0
+            self.correctTag = 0
             for (tag, item) in [item1, item2, item3, item4].enumerated() {
                 if (item.rankint > maxItem.rankint) {
                     maxItem = item
-                    correctTag = tag
+                    self.correctTag = tag
                 }
             }
             
