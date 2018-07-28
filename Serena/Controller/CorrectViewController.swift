@@ -10,12 +10,36 @@ import UIKit
 
 class CorrectViewController: UIViewController {
 
+    var item: NewsItem!
+    
+    @IBOutlet weak var descriptionLabel: UILabel!
+    @IBOutlet weak var keywordLabel: UILabel!
+    @IBOutlet weak var learnMoreButton: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.keywordLabel.text = item.title
+        self.descriptionLabel.text = item.description
 
         // Do any additional setup after loading the view.
+        if let _ = item.url {
+            // this is not empty
+        } else {
+            learnMoreButton.isHidden = true
+        }
+        
     }
 
+    @IBAction func learnMoreTapped(_ sender: Any) {
+        if let url: String = item.url {
+            if let urlClass: URL = URL(string: url) {
+                UIApplication.shared.open(urlClass, options: [:], completionHandler: nil)
+            }
+        }
+        
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

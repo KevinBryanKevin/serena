@@ -7,5 +7,6 @@ target 'Serena' do
 
   # Pods for Serena
   pod 'SCLAlertView', :git => 'https://github.com/vikmeup/SCLAlertView-Swift.git'
+  pod 'AFNetworking', '~> 3.2'
 
 end

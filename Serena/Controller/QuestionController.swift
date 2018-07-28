@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SCLAlertView
 
 class QuestionController: UIViewController {
     
@@ -17,6 +18,7 @@ class QuestionController: UIViewController {
     
     // This is the tag of the "correct" button.
     var correctTag: Int?
+    var correctItem: NewsItem?
     
     // I will return only the four elements that were chosen.
     func getChoices(originals: [NewsItem]) -> (NewsItem, NewsItem, NewsItem, NewsItem) {
@@ -29,14 +31,20 @@ class QuestionController: UIViewController {
     }
     
     @IBAction func sendCorrect(_ sender: Any) {
-        //first button pressed
         let button = sender as! UIButton
-        if let correct = correctTag {
+        if let correct = self.correctTag {
             if button.tag == correct {
+                SCLAlertView().showSuccess("Great job! You're a news genius!")
+                
                 let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
-                let nextViewController = storyBoard.instantiateViewController(withIdentifier: "CorrectViewController")
-                self.navigationController?.pushViewController(nextViewController, animated: true)
+                let nextViewController = storyBoard.instantiateViewController(withIdentifier: "CorrectViewController") as! CorrectViewController
+                
+                nextViewController.item = self.correctItem
+                 self.navigationController?.pushViewController(nextViewController, animated: true)
+            } else {
+                SCLAlertView().showError("That's not the right answer")
             }
+            
         }
     }
     
@@ -55,6 +63,7 @@ class QuestionController: UIViewController {
                 if (item.rankint > maxItem.rankint) {
                     maxItem = item
                     self.correctTag = tag
+                    self.correctItem = item
                 }
             }
             
