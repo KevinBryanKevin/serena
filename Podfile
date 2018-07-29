@@ -8,5 +8,7 @@ target 'Serena' do
   # Pods for Serena
   pod 'SCLAlertView', '~> 0.8'
   pod 'AFNetworking', '~> 3.2'
+  pod 'Parse'
+  pod 'Eureka'
 
 end
