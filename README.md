@@ -17,6 +17,7 @@ git clone https://github.com/RSPiOS/serena.git
 4. Launch XCode and run the workspace in the newly created `serena` directory.
 
 # Downloading the latest code.
+0. First, change directory into your repository. If you followed the instructions above, this should be as simple as doing `cd ~/Documents/serena`.
 1. First, if you've made no local changes, run `git reset --hard HEAD`. The command will make sure your code matches the latest version on your computer.
 2. Now run `git pull` to pull the latest changes from github.
 

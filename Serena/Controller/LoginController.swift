@@ -43,6 +43,11 @@ class LoginController: UIViewController {
             return
         }
         if let user = checkLogin(username: username, password: password) {
+            let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
+            
+            let nextViewController = storyBoard.instantiateViewController(withIdentifier: "NavigationController")
+            self.present(nextViewController, animated:true, completion:nil)
+            
             // in here, we validated the user
             // moving to the next screen
             print(user)

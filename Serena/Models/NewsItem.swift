@@ -11,7 +11,8 @@ import Foundation
 class NewsItemXMLDelegate : NSObject, XMLParserDelegate {
     
     var itemTag = "item"
-    var dictionaryKey: [String] = ["title", "ht:news_item_snippet"]
+    var dictionaryKey: [String] = ["title", "ht:news_item_snippet", "ht:approx_traffic"]
+    
     
     // This is nil if I have no value to store.
     var currentText: String? = nil
@@ -22,7 +23,7 @@ class NewsItemXMLDelegate : NSObject, XMLParserDelegate {
     
     func parser(_ parser: XMLParser, didStartElement elementName: String, namespaceURI: String?, qualifiedName qName: String?, attributes attributeDict: [String : String]) {
         // We started an element.
-        print("Starting Element \(elementName)")
+       
         if elementName == itemTag {
             currentDictionary = [:]
         }
@@ -38,7 +39,7 @@ class NewsItemXMLDelegate : NSObject, XMLParserDelegate {
     
     func parser(_ parser: XMLParser, didEndElement elementName: String, namespaceURI: String?, qualifiedName qName: String?) {
         // We know we ended an element.
-        print("Ending element: \(elementName)")
+        
         if elementName == itemTag {
             // What to do here!?
             results.append(NewsItem(dict: currentDictionary!))
@@ -56,18 +57,21 @@ class NewsItemXMLDelegate : NSObject, XMLParserDelegate {
 class NewsItem {
     var title: String
     var description: String
-    var rank : Int
+    var rank : String
+    var rankint : Int
     
     init(dict: [String: String]) {
         title = dict["title"] ?? "Unavailable"
-        description = dict["ht:news_item_snippet"] ?? "Unavailble"
-        rank = 0
+        description = dict["ht:news_item_snippet"] ?? "Unavailable"
+        rank = dict["ht:approx_traffic"] ?? "Unavailable"
+        rankint = Int(rank.dropLast().replacingOccurrences(of: ",", with: "")) ?? 0
     }
     
-    init(title: String, description: String) {
+    init(title: String, description: String, rank: String) {
         self.title = title
         self.description = description
-        self.rank = 0
+        self.rank = rank
+        self.rankint = 0
     }
     
     class func fetchTrendingNews(callback: @escaping (([NewsItem], String?) -> Void) ) {
