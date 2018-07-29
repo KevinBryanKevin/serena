@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -193,13 +194,58 @@
                     <view key="view" contentMode="scaleToFill" id="kba-Cx-4XM">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="nwB-cp-Qbw">
+                                <rect key="frame" x="80" y="45" width="215" height="215"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="nwB-cp-Qbw" secondAttribute="height" multiplier="1:1" id="gpp-vF-xzs"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Keyword" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O8R-zE-nXl">
+                                <rect key="frame" x="154.5" y="268" width="66.5" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WYl-CL-dzK">
+                                <rect key="frame" x="146.5" y="621" width="82" height="30"/>
+                                <state key="normal" title="Learn More!"/>
+                                <connections>
+                                    <action selector="learnMoreTapped:" destination="Ci9-s8-RAF" eventType="touchUpInside" id="PlK-zQ-2Yn"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Short Description" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rxT-BE-iyy">
+                                <rect key="frame" x="16" y="305" width="117" height="17.5"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="O8R-zE-nXl" firstAttribute="top" secondItem="nwB-cp-Qbw" secondAttribute="bottom" constant="8" id="0ik-Ut-DgF"/>
+                            <constraint firstItem="nwB-cp-Qbw" firstAttribute="top" secondItem="Sev-on-Hsd" secondAttribute="top" constant="25" id="3WJ-It-4vX"/>
+                            <constraint firstItem="Sev-on-Hsd" firstAttribute="bottom" secondItem="WYl-CL-dzK" secondAttribute="bottom" constant="16" id="3g6-5T-n5B"/>
+                            <constraint firstItem="O8R-zE-nXl" firstAttribute="centerX" secondItem="kba-Cx-4XM" secondAttribute="centerX" id="Oxv-JD-rbj"/>
+                            <constraint firstItem="WYl-CL-dzK" firstAttribute="centerX" secondItem="kba-Cx-4XM" secondAttribute="centerX" id="RAJ-Q7-icG"/>
+                            <constraint firstItem="rxT-BE-iyy" firstAttribute="leading" secondItem="Sev-on-Hsd" secondAttribute="leading" constant="16" id="Zfp-Ig-SCI"/>
+                            <constraint firstItem="Sev-on-Hsd" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="rxT-BE-iyy" secondAttribute="trailing" constant="16" id="eYW-wO-hKR"/>
+                            <constraint firstItem="nwB-cp-Qbw" firstAttribute="leading" secondItem="Sev-on-Hsd" secondAttribute="leading" constant="80" id="hM2-CO-yh4"/>
+                            <constraint firstItem="rxT-BE-iyy" firstAttribute="top" secondItem="O8R-zE-nXl" secondAttribute="bottom" constant="16" id="hbh-fZ-gaY"/>
+                            <constraint firstItem="Sev-on-Hsd" firstAttribute="trailing" secondItem="nwB-cp-Qbw" secondAttribute="trailing" constant="80" id="xHJ-kX-RhR"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="Sev-on-Hsd"/>
                     </view>
+                    <connections>
+                        <outlet property="descriptionLabel" destination="rxT-BE-iyy" id="cKI-RO-6pd"/>
+                        <outlet property="keywordLabel" destination="O8R-zE-nXl" id="ZRb-ud-rsV"/>
+                        <outlet property="learnMoreButton" destination="WYl-CL-dzK" id="rum-8h-zDE"/>
+                        <outlet property="newsImage" destination="nwB-cp-Qbw" id="oyC-Hd-zc0"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QWQ-ER-rx2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2785" y="15"/>
+            <point key="canvasLocation" x="2784.8000000000002" y="14.842578710644679"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="juq-Ct-Hk2">
