@@ -9,6 +9,6 @@ target 'Serena' do
   pod 'SCLAlertView', '~> 0.8'
   pod 'AFNetworking', '~> 3.2'
   pod 'Parse'
-  pod 'Eureka'
+  pod 'Eureka', :git => 'https://github.com/xmartlabs/Eureka.git', :branch => 'Swift-3.3'
 
 end
