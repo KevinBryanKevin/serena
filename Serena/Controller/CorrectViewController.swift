@@ -8,6 +8,7 @@
 
 import UIKit
 import AFNetworking
+import Parse
 
 class CorrectViewController: UIViewController {
 
@@ -37,6 +38,15 @@ class CorrectViewController: UIViewController {
             learnMoreButton.isHidden = true
         }
         
+        updateCurrentUser()
+        
+    }
+    
+    func updateCurrentUser() {
+        let user = PFUser.current()!
+        let currentScore = user["score"] as! Int
+        user["score"] = currentScore + 1
+        user.saveInBackground()
     }
 
     @IBAction func learnMoreTapped(_ sender: Any) {

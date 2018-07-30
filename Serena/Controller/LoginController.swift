@@ -8,12 +8,23 @@
 
 import UIKit
 import Parse
+import SCLAlertView
 
 class LoginController: UIViewController {
 
     @IBOutlet weak var logologin: UIImageView!
     @IBOutlet weak var usernameLogin: UITextField!
     @IBOutlet weak var passwordLogin: UITextField!
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        let currentUser = PFUser.current()
+        if currentUser != nil {
+            let nc = self.storyboard!.instantiateViewController(withIdentifier: "NavigationController")
+            self.present(nc, animated: true, completion: nil)
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,41 +42,33 @@ class LoginController: UIViewController {
         guard let username = usernameLogin.text else {
             // What to do if they click button and type nothing
             // TODO(...): Alert the user that they need a username
+            SCLAlertView().showError("", subTitle: "")
             
-            let alert = UIAlertController(title: "Invalid", message: "Did not type anything", preferredStyle: .alert)
-            let action = UIAlertAction(title: "OK", style: .default, handler: nil)
-            alert.addAction(action)
             
-            self.present(alert, animated: true, completion: nil)
             return
         }
         guard let password = passwordLogin.text else {
             // Alert the user that they need a password
+            SCLAlertView().showError("", subTitle: "")
             return
         }
-        if let user = checkLogin(username: username, password: password) {
-            let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
-            
-            let nextViewController = storyBoard.instantiateViewController(withIdentifier: "NavigationController")
-            self.present(nextViewController, animated:true, completion:nil)
-            
-            // in here, we validated the user
-            // moving to the next screen
-            print(user)
+        PFUser.logInWithUsername(inBackground: username, password: password) { (user: PFUser?, error: Error?) in
+            if user != nil {
+                let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
+                
+                let nextViewController = storyBoard.instantiateViewController(withIdentifier: "NavigationController")
+                self.present(nextViewController, animated:true, completion:nil)
+                return
+            }
+            if error != nil {
+                SCLAlertView().showNotice("Unable to login", subTitle: error!.localizedDescription)
+            }
+            else {
+                SCLAlertView().showNotice("Unable to login", subTitle: "Unknown Error")
+            }
         }
-        // alert the user that something went wrong
-        
     }
-    
-    // Given a username and a password, this function should validate the username/password and return  a corresponding User
-    // TODO(somebody): finish implementing
-    private func checkLogin(username: String, password: String) -> User? {
-        if username == "" || password == "" {
-            return nil
-        }
-        return User(username: username, password: password)
-    }
-    
+
     /*
     // MARK: - Navigation
 
