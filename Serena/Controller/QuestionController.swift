@@ -26,8 +26,27 @@ class QuestionController: UIViewController {
         // let's look at the rank of the orignal and do something fancy
         // let's just return the first 4
         // let's add a joke one and return that sometimes
-        // write some code.
+//<<<<<<< HEAD
+        
+        var mySet: Set = [0];
+        mySet.removeFirst()
+        while(mySet.count < 4){
+            mySet.insert(Int(arc4random_uniform(10)))
+        }
+        
+        print(mySet)
+        var numbers = [0,0,0,0]
+        var i = 0;
+        for item in mySet{
+            numbers[i] = item;
+            i = i + 1;
+        }
+        print(numbers)
+        return (originals[numbers[0]], originals[numbers[1]], originals[numbers[2]], originals[numbers[3]])
+//=======
+        /* write some code.
         return (originals[0], originals[1], originals[2], originals[3])
+>>>>>>> a5f9d4676bfa83d8ce270aaedbef1cc812991d2d*/
     }
     
     @IBAction func sendCorrect(_ sender: Any) {
