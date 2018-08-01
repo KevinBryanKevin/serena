@@ -31,7 +31,7 @@ class QuestionController: UIViewController {
         var mySet: Set = [0];
         mySet.removeFirst()
         while(mySet.count < 4){
-            mySet.insert(Int(arc4random_uniform(10)))
+            mySet.insert(Int(arc4random_uniform(20)))
         }
         
         print(mySet)
