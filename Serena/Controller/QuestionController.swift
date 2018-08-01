@@ -67,9 +67,12 @@ class QuestionController: UIViewController {
         }
     }
     
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    override func viewWillAppear(_ animated: Bool) {
+        print("hello")
+        //let example = "hello"
+        super.viewWillAppear(true)
+        
+        
         
         self.navigationController?.title = "News Question"
         
@@ -94,6 +97,39 @@ class QuestionController: UIViewController {
                 self.option4.setTitle(item4.title, for: UIControlState.normal)
             }
         })
+        
+        
+        
+        
+        
+        
+    }
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        self.navigationController?.title = "News Question"
+        
+        /*NewsItem.fetchTrendingNews(callback: {(news: [NewsItem], errorMsg: String?) in
+            let (item1, item2, item3, item4) = self.getChoices(originals: news)
+            
+            var maxItem: NewsItem = item1
+            for (tag, item) in [item1, item2, item3, item4].enumerated() {
+                if (item.rankint >= maxItem.rankint) {
+                    maxItem = item
+                    self.correctTag = tag
+                    self.correctItem = item
+                }
+            }
+            
+            // We now know the max item.
+            
+            DispatchQueue.main.async {
+                self.option1.setTitle(item1.title, for: UIControlState.normal)
+                self.option2.setTitle(item2.title, for: UIControlState.normal)
+                self.option3.setTitle(item3.title, for: UIControlState.normal)
+                self.option4.setTitle(item4.title, for: UIControlState.normal)
+            }
+        })*/
         
 
         // Do any additional setup after loading the view.
