@@ -22,9 +22,20 @@ class LoginController: UIViewController {
         
         let currentUser = PFUser.current()
         if currentUser != nil {
-            currentUser?.pinInBackground()
-            let nc = self.storyboard!.instantiateViewController(withIdentifier: "NavigationController")
-            self.present(nc, animated: true, completion: nil)
+            SVProgressHUD.show(withStatus: "Loading...")
+            currentUser?.pinInBackground(block: { (success: Bool, error: Error?) in
+                SVProgressHUD.dismiss()
+                if (success) {
+                    let nc = self.storyboard!.instantiateViewController(withIdentifier: "TabBarController")
+                    return self.present(nc, animated: true, completion: nil)
+                }
+                if let errorMsg = error {
+                    SCLAlertView().showInfo("Restoration Failed.", subTitle: errorMsg.localizedDescription)
+                    return
+                } else {
+                    SCLAlertView().showWarning("Restoration Failed.", subTitle: "Unknown Error");
+                }
+            })
         }
     }
     
@@ -102,6 +113,7 @@ class LoginController: UIViewController {
             }
             else {
                 SCLAlertView().showNotice("Unable to login", subTitle: "Unknown Error")
+                return
             }
         }
     }

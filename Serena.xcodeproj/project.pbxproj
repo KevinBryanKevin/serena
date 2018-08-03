@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		1012357C2113E7FA00B28091 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1012357B2113E7FA00B28091 /* Theme.swift */; };
+		1012357E21141FB600B28091 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1012357D21141FB600B28091 /* ProfileViewController.swift */; };
 		1072085F2104D79500CAA33F /* NewsItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1072085E2104D79500CAA33F /* NewsItem.swift */; };
 		10AD24D2210E17AF00ED4846 /* RegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10AD24D1210E17AF00ED4846 /* RegistrationViewController.swift */; };
 		10CCEC8A210BFF46007162E0 /* CorrectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10CCEC89210BFF46007162E0 /* CorrectViewController.swift */; };
@@ -25,6 +26,7 @@
 /* Begin PBXFileReference section */
 		0DEE8D0C0885D26D0A3A1480 /* Pods-Serena.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Serena.release.xcconfig"; path = "Pods/Target Support Files/Pods-Serena/Pods-Serena.release.xcconfig"; sourceTree = "<group>"; };
 		1012357B2113E7FA00B28091 /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
+		1012357D21141FB600B28091 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		1072085E2104D79500CAA33F /* NewsItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsItem.swift; sourceTree = "<group>"; };
 		10AD24D1210E17AF00ED4846 /* RegistrationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewController.swift; sourceTree = "<group>"; };
 		10CCEC89210BFF46007162E0 /* CorrectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CorrectViewController.swift; sourceTree = "<group>"; };
@@ -108,6 +110,7 @@
 		10D314C421038D8A00A1627E /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				1012357D21141FB600B28091 /* ProfileViewController.swift */,
 				10AD24D1210E17AF00ED4846 /* RegistrationViewController.swift */,
 				10D314BE21038A2500A1627E /* LoginController.swift */,
 				10E0473721039CDB00822460 /* QuestionController.swift */,
@@ -258,6 +261,7 @@
 			files = (
 				1012357C2113E7FA00B28091 /* Theme.swift in Sources */,
 				10CCEC8A210BFF46007162E0 /* CorrectViewController.swift in Sources */,
+				1012357E21141FB600B28091 /* ProfileViewController.swift in Sources */,
 				10E0473821039CDB00822460 /* QuestionController.swift in Sources */,
 				10AD24D2210E17AF00ED4846 /* RegistrationViewController.swift in Sources */,
 				1072085F2104D79500CAA33F /* NewsItem.swift in Sources */,
