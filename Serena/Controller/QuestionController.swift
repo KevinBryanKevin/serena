@@ -22,11 +22,6 @@ class QuestionController: UIViewController {
     
     // I will return only the four elements that were chosen.
     func getChoices(originals: [NewsItem]) -> (NewsItem, NewsItem, NewsItem, NewsItem) {
-        // let's do this randomly
-        // let's look at the rank of the orignal and do something fancy
-        // let's just return the first 4
-        // let's add a joke one and return that sometimes
-//<<<<<<< HEAD
         
         var mySet: Set = [0];
         mySet.removeFirst()
@@ -43,10 +38,6 @@ class QuestionController: UIViewController {
         }
         print(numbers)
         return (originals[numbers[0]], originals[numbers[1]], originals[numbers[2]], originals[numbers[3]])
-//=======
-        /* write some code.
-        return (originals[0], originals[1], originals[2], originals[3])
->>>>>>> a5f9d4676bfa83d8ce270aaedbef1cc812991d2d*/
     }
     
     @IBAction func sendCorrect(_ sender: Any) {
@@ -108,31 +99,6 @@ class QuestionController: UIViewController {
         super.viewDidLoad()
         
         self.navigationController?.title = "News Question"
-        
-        /*NewsItem.fetchTrendingNews(callback: {(news: [NewsItem], errorMsg: String?) in
-            let (item1, item2, item3, item4) = self.getChoices(originals: news)
-            
-            var maxItem: NewsItem = item1
-            for (tag, item) in [item1, item2, item3, item4].enumerated() {
-                if (item.rankint >= maxItem.rankint) {
-                    maxItem = item
-                    self.correctTag = tag
-                    self.correctItem = item
-                }
-            }
-            
-            // We now know the max item.
-            
-            DispatchQueue.main.async {
-                self.option1.setTitle(item1.title, for: UIControlState.normal)
-                self.option2.setTitle(item2.title, for: UIControlState.normal)
-                self.option3.setTitle(item3.title, for: UIControlState.normal)
-                self.option4.setTitle(item4.title, for: UIControlState.normal)
-            }
-        })*/
-        
-
-        // Do any additional setup after loading the view.
     }
 
     override func didReceiveMemoryWarning() {
