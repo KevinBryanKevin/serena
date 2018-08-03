@@ -56,7 +56,7 @@ class LoginController: UIViewController {
             if user != nil {
                 let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
                 
-                let nextViewController = storyBoard.instantiateViewController(withIdentifier: "NavigationController")
+                let nextViewController = storyBoard.instantiateViewController(withIdentifier: "TabBarController")
                 self.present(nextViewController, animated:true, completion:nil)
                 return
             }
