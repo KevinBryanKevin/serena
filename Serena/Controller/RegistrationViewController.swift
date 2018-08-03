@@ -9,15 +9,45 @@
 import UIKit
 import SCLAlertView
 import Parse
+import Eureka
 
-class RegistrationViewController: UIViewController {
+class RegistrationViewController: FormViewController {
 
-    @IBOutlet weak var username: UITextField!
-    @IBOutlet weak var password: UITextField!
-    @IBOutlet weak var email: UITextField!
-    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        form +++ Section("Login Credentials")
+            <<< NameRow(){ row in
+                row.title = "Username"
+                row.tag = "username"
+                row.placeholder = "KittensMittens123"
+                row.add(rule: RuleRequired())
+                row.add(rule: RuleMinLength(minLength: 4))
+                row.add(rule: RuleMaxLength(maxLength: 20))
+                row.validationOptions = .validatesOnDemand
+            }
+            <<< PasswordRow(){ row in
+                row.title = "Password"
+                row.tag = "password"
+                row.placeholder = "*******"
+                row.add(rule: RuleRequired())
+                row.add(rule: RuleMinLength(minLength: 8))
+                row.add(rule: RuleMaxLength(maxLength: 20))
+                row.validationOptions = .validatesOnDemand
+            }
+            +++ Section("Profile Information")
+            <<< EmailRow(){ row in
+                row.title = "Email Addres"
+                row.tag = "email"
+                row.placeholder = "AppleFan@email.com"
+                row.add(rule: RuleEmail())
+                row.add(rule: RuleRequired())
+                row.validationOptions = .validatesOnDemand
+                
+            animateScroll = true
+            // Leaves 20pt of space between the keyboard and the highlighted row after scrolling to an off screen row
+            rowKeyboardSpacing = 20
+        }
 
         // Do any additional setup after loading the view.
     }
@@ -27,19 +57,24 @@ class RegistrationViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    @IBAction func register(_ sender: UIButton) {
-        guard let requestedUsername = username.text else {
+    @IBAction func register(_ sender: UIBarButtonItem) {
+        let errors = form.validate()
+        if (errors.count > 0) {
+            SCLAlertView().showInfo("Errors in Registration Form", subTitle: errors[0].msg)
+            return
+        }
+        let usernameRow: NameRow? = form.rowBy(tag: "username")
+        guard let requestedUsername = usernameRow?.value else {
             SCLAlertView().showError("No Username", subTitle: "Cannot register without a username!")
             return
         }
-        guard let requestedPassword = password.text else {
+        let passwordRow: PasswordRow? = form.rowBy(tag: "password")
+        guard let requestedPassword = passwordRow?.value else {
             SCLAlertView().showError("No Password", subTitle: "Cannot register without a password!")
             return
         }
-        guard let requestedEmail = email.text else {
-            SCLAlertView().showError("No Email", subTitle: "Cannot register without an email!")
-            return
-        }
+        let emailRow: EmailRow? = form.rowBy(tag: "email")
+        let requestedEmail = emailRow?.value ?? ""
         
         let user = PFUser()
         user.username = requestedUsername
@@ -49,10 +84,7 @@ class RegistrationViewController: UIViewController {
         
         user.signUpInBackground { (success: Bool, error: Error?) in
             if (success) {
-                guard let lc = self.storyboard?.instantiateViewController(withIdentifier: "LoginController") else {
-                    SCLAlertView().showError("Internal", subTitle: "Unable to obtain login controller!")
-                    return
-                }
+                let lc = self.storyboard!.instantiateViewController(withIdentifier: "LoginController")
                 self.present(lc, animated: true, completion: nil)
                 
             } else {
