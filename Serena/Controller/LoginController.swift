@@ -22,6 +22,7 @@ class LoginController: UIViewController {
         
         let currentUser = PFUser.current()
         if currentUser != nil {
+            currentUser?.pinInBackground()
             let nc = self.storyboard!.instantiateViewController(withIdentifier: "NavigationController")
             self.present(nc, animated: true, completion: nil)
         }
