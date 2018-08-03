@@ -25,6 +25,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }
         Parse.initialize(with: configuration)
         
+        let theme = ThemeManager.currentTheme()
+        ThemeManager.applyTheme(theme: theme)
+        
         return true
     }
 

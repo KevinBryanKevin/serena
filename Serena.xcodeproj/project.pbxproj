@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1012357C2113E7FA00B28091 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1012357B2113E7FA00B28091 /* Theme.swift */; };
 		1072085F2104D79500CAA33F /* NewsItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1072085E2104D79500CAA33F /* NewsItem.swift */; };
 		10AD24D2210E17AF00ED4846 /* RegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10AD24D1210E17AF00ED4846 /* RegistrationViewController.swift */; };
 		10CCEC8A210BFF46007162E0 /* CorrectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10CCEC89210BFF46007162E0 /* CorrectViewController.swift */; };
@@ -23,6 +24,7 @@
 
 /* Begin PBXFileReference section */
 		0DEE8D0C0885D26D0A3A1480 /* Pods-Serena.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Serena.release.xcconfig"; path = "Pods/Target Support Files/Pods-Serena/Pods-Serena.release.xcconfig"; sourceTree = "<group>"; };
+		1012357B2113E7FA00B28091 /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
 		1072085E2104D79500CAA33F /* NewsItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsItem.swift; sourceTree = "<group>"; };
 		10AD24D1210E17AF00ED4846 /* RegistrationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewController.swift; sourceTree = "<group>"; };
 		10CCEC89210BFF46007162E0 /* CorrectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CorrectViewController.swift; sourceTree = "<group>"; };
@@ -98,6 +100,7 @@
 		10D314C321038D8200A1627E /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				1012357B2113E7FA00B28091 /* Theme.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -251,6 +254,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1012357C2113E7FA00B28091 /* Theme.swift in Sources */,
 				10CCEC8A210BFF46007162E0 /* CorrectViewController.swift in Sources */,
 				10E0473821039CDB00822460 /* QuestionController.swift in Sources */,
 				10AD24D2210E17AF00ED4846 /* RegistrationViewController.swift in Sources */,
