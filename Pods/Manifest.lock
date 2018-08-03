@@ -21,12 +21,14 @@ PODS:
   - Parse/Core (1.17.1):
     - Bolts/Tasks (~> 1.9)
   - SCLAlertView (0.8)
+  - SVProgressHUD (2.2.5)
 
 DEPENDENCIES:
   - AFNetworking (~> 3.2)
   - Eureka (from `https://github.com/xmartlabs/Eureka.git`, branch `Swift-3.3`)
   - Parse
   - SCLAlertView (~> 0.8)
+  - SVProgressHUD (~> 2.2)
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
@@ -34,6 +36,7 @@ SPEC REPOS:
     - Bolts
     - Parse
     - SCLAlertView
+    - SVProgressHUD
 
 EXTERNAL SOURCES:
   Eureka:
@@ -51,7 +54,8 @@ SPEC CHECKSUMS:
   Eureka: 5b9418d7bfdc21ca977d69d124a6409f3e9af2c7
   Parse: d3edaf8c7c722cb33cb83ba7821d015ae32d362d
   SCLAlertView: 6a77bb2edfc65e04dbe57725546cb4107a506b85
+  SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
 
-PODFILE CHECKSUM: 74f92e205443f2d9583c7c1458444ced88beaf21
+PODFILE CHECKSUM: d98cb82aaacefca6295fe6c7401f2d834743cabb
 
 COCOAPODS: 1.5.3

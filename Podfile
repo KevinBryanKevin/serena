@@ -10,5 +10,6 @@ target 'Serena' do
   pod 'AFNetworking', '~> 3.2'
   pod 'Parse'
   pod 'Eureka', :git => 'https://github.com/xmartlabs/Eureka.git', :branch => 'Swift-3.3'
+  pod 'SVProgressHUD', '~> 2.2'
 
 end
