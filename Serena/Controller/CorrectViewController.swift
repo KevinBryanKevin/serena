@@ -46,7 +46,7 @@ class CorrectViewController: UIViewController {
         let user = PFUser.current()!
         let currentScore = user["score"] as! Int
         user["score"] = currentScore + 1
-        user.saveInBackground()
+        user.saveEventually()
     }
 
     @IBAction func learnMoreTapped(_ sender: Any) {

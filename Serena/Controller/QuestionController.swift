@@ -8,6 +8,7 @@
 
 import UIKit
 import SCLAlertView
+import SVProgressHUD
 
 class QuestionController: UIViewController {
     
@@ -29,14 +30,12 @@ class QuestionController: UIViewController {
             mySet.insert(Int(arc4random_uniform(20)))
         }
         
-        print(mySet)
         var numbers = [0,0,0,0]
         var i = 0;
         for item in mySet{
             numbers[i] = item;
             i = i + 1;
         }
-        print(numbers)
         return (originals[numbers[0]], originals[numbers[1]], originals[numbers[2]], originals[numbers[3]])
     }
     
@@ -59,14 +58,9 @@ class QuestionController: UIViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        print("hello")
-        //let example = "hello"
         super.viewWillAppear(true)
         
-        
-        
-        self.navigationController?.title = "News Question"
-        
+        SVProgressHUD.show(withStatus: "Fetching...")
         NewsItem.fetchTrendingNews(callback: {(news: [NewsItem], errorMsg: String?) in
             let (item1, item2, item3, item4) = self.getChoices(originals: news)
             
@@ -78,10 +72,9 @@ class QuestionController: UIViewController {
                     self.correctItem = item
                 }
             }
-            
-            // We now know the max item.
-            
+    
             DispatchQueue.main.async {
+                    SVProgressHUD.dismiss()
                 self.option1.setTitle(item1.title, for: UIControlState.normal)
                 self.option2.setTitle(item2.title, for: UIControlState.normal)
                 self.option3.setTitle(item3.title, for: UIControlState.normal)
@@ -97,25 +90,10 @@ class QuestionController: UIViewController {
     }
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        self.navigationController?.title = "News Question"
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }

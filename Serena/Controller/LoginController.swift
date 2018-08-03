@@ -9,6 +9,7 @@
 import UIKit
 import Parse
 import SCLAlertView
+import SVProgressHUD
 
 class LoginController: UIViewController {
 
@@ -75,19 +76,19 @@ class LoginController: UIViewController {
     @IBAction func loginTapped(_ sender: Any) {
         // Check the login?
         guard let username = usernameLogin.text else {
-            // What to do if they click button and type nothing
-            // TODO(...): Alert the user that they need a username
-            SCLAlertView().showError("", subTitle: "")
+            SCLAlertView().showError("Missing Field", subTitle: "Username is required!")
             
             
             return
         }
         guard let password = passwordLogin.text else {
             // Alert the user that they need a password
-            SCLAlertView().showError("", subTitle: "")
+            SCLAlertView().showError("Missing Field", subTitle: "Password is required!")
             return
         }
+        SVProgressHUD.show(withStatus: "Logging in...")
         PFUser.logInWithUsername(inBackground: username, password: password) { (user: PFUser?, error: Error?) in
+            SVProgressHUD.dismiss()
             if user != nil {
                 let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
                 
