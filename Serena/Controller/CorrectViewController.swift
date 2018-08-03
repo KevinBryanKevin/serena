@@ -14,16 +14,15 @@ class CorrectViewController: UIViewController {
 
     var item: NewsItem!
     
-    @IBOutlet weak var descriptionLabel: UILabel!
     @IBOutlet weak var keywordLabel: UILabel!
     @IBOutlet weak var learnMoreButton: UIButton!
     @IBOutlet weak var newsImage: UIImageView!
+    @IBOutlet weak var webView: UIWebView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
     
         self.keywordLabel.text = item.title
-        self.descriptionLabel.text = item.description
         if let url = item.pictureURL {
             self.newsImage.setImageWith(url)
         } else {
@@ -37,6 +36,10 @@ class CorrectViewController: UIViewController {
         } else {
             learnMoreButton.isHidden = true
         }
+        
+        let html = "<html><head><title></title></head><body style=\"background:transparent;\">\(item.description)</body></html>"
+        webView.backgroundColor = .clear
+        webView.loadHTMLString(html, baseURL: nil)
         
         updateCurrentUser()
         

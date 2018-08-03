@@ -17,7 +17,17 @@ class ProfileViewController: FormViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        form +++ Section("Account")
+        form +++ Section("Settings")
+            <<< SegmentedRow<String>() { row in
+                row.options = [Theme.Default.rawValue, Theme.Dark.rawValue, Theme.Graphical.rawValue]
+                row.value = ThemeManager.currentTheme().rawValue
+                }.onChange({ (row: SegmentedRow<String>) in
+                    guard let value = row.value else { return }
+                    if let selectedTheme = Theme(rawValue: value) {
+                        ThemeManager.applyTheme(theme: selectedTheme)
+                    }
+                })
+            +++ Section("Account")
             <<< ButtonRow(){ row in
                 row.title = "Log Out"
                 row.onCellSelection({ (cell: ButtonCellOf<String>, button: ButtonRow) in
@@ -48,6 +58,7 @@ class ProfileViewController: FormViewController {
                 })
                 
         }
+        
         // Do any additional setup after loading the view.
     }
 

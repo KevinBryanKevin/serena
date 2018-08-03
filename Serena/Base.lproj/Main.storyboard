@@ -117,7 +117,11 @@
                         <viewLayoutGuide key="safeArea" id="fHp-GY-tgd"/>
                     </view>
                     <navigationItem key="navigationItem" title="Create Account" id="Cum-BI-f0T">
-                        <barButtonItem key="leftBarButtonItem" systemItem="stop" id="UcW-FG-vVJ"/>
+                        <barButtonItem key="leftBarButtonItem" systemItem="stop" id="UcW-FG-vVJ">
+                            <connections>
+                                <action selector="onCancel:" destination="V1X-fr-BmZ" id="oe3-m0-5D5"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="action" id="Csd-Lk-NdO">
                             <connections>
                                 <action selector="register:" destination="V1X-fr-BmZ" id="m52-kH-z1d"/>
@@ -127,7 +131,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GVD-8e-Bjl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1229" y="933"/>
+            <point key="canvasLocation" x="1293" y="978"/>
         </scene>
         <!--Quiz-->
         <scene sceneID="sR6-vM-3BX">
@@ -151,28 +155,28 @@
                             </label>
                             <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b5G-UG-1IY">
                                 <rect key="frame" x="10" y="385" width="396" height="30"/>
-                                <state key="normal" title="Button"/>
+                                <state key="normal" title="Loading..."/>
                                 <connections>
                                     <action selector="sendCorrect:" destination="5Lz-1g-5gq" eventType="touchUpInside" id="qiF-IU-CCR"/>
                                 </connections>
                             </button>
                             <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hRR-iC-YVY">
                                 <rect key="frame" x="10" y="307" width="394" height="30"/>
-                                <state key="normal" title="Button"/>
+                                <state key="normal" title="Loading..."/>
                                 <connections>
                                     <action selector="sendCorrect:" destination="5Lz-1g-5gq" eventType="touchUpInside" id="1bf-B3-61e"/>
                                 </connections>
                             </button>
                             <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a7A-5k-14Y">
                                 <rect key="frame" x="10" y="463" width="394" height="30"/>
-                                <state key="normal" title="Button"/>
+                                <state key="normal" title="Loading..."/>
                                 <connections>
                                     <action selector="sendCorrect:" destination="5Lz-1g-5gq" eventType="touchUpInside" id="qZC-i2-mFl"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PfC-Bt-2RU">
                                 <rect key="frame" x="10" y="228.66666666666666" width="394" height="29.999999999999972"/>
-                                <state key="normal" title="Button"/>
+                                <state key="normal" title="Loading..."/>
                                 <connections>
                                     <action selector="sendCorrect:" destination="5Lz-1g-5gq" eventType="touchUpInside" id="uPQ-ys-AGf"/>
                                 </connections>
@@ -238,43 +242,41 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WYl-CL-dzK">
-                                <rect key="frame" x="166" y="237.66666666666666" width="82" height="29.999999999999972"/>
+                                <rect key="frame" x="166" y="674" width="82" height="30"/>
                                 <state key="normal" title="Learn More!"/>
                                 <connections>
                                     <action selector="learnMoreTapped:" destination="Ci9-s8-RAF" eventType="touchUpInside" id="PlK-zQ-2Yn"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Short Description" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rxT-BE-iyy">
-                                <rect key="frame" x="16" y="190" width="117" height="17.666666666666657"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PSS-lv-fEn">
+                                <rect key="frame" x="16" y="189.66666666666666" width="382" height="468.33333333333337"/>
+                            </webView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="nwB-cp-Qbw" firstAttribute="centerX" secondItem="kba-Cx-4XM" secondAttribute="centerX" id="0hf-F6-272"/>
                             <constraint firstItem="O8R-zE-nXl" firstAttribute="top" secondItem="nwB-cp-Qbw" secondAttribute="bottom" constant="8" id="0ik-Ut-DgF"/>
                             <constraint firstItem="nwB-cp-Qbw" firstAttribute="top" secondItem="Sev-on-Hsd" secondAttribute="top" constant="25" id="3WJ-It-4vX"/>
-                            <constraint firstItem="WYl-CL-dzK" firstAttribute="top" secondItem="O8R-zE-nXl" secondAttribute="bottom" constant="64" id="5pb-c7-eJD"/>
                             <constraint firstItem="O8R-zE-nXl" firstAttribute="centerX" secondItem="kba-Cx-4XM" secondAttribute="centerX" id="Oxv-JD-rbj"/>
+                            <constraint firstItem="Sev-on-Hsd" firstAttribute="trailing" secondItem="PSS-lv-fEn" secondAttribute="trailing" constant="16" id="Qbw-W0-WJq"/>
                             <constraint firstItem="WYl-CL-dzK" firstAttribute="centerX" secondItem="kba-Cx-4XM" secondAttribute="centerX" id="RAJ-Q7-icG"/>
-                            <constraint firstItem="rxT-BE-iyy" firstAttribute="leading" secondItem="Sev-on-Hsd" secondAttribute="leading" constant="16" id="Zfp-Ig-SCI"/>
-                            <constraint firstItem="Sev-on-Hsd" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="rxT-BE-iyy" secondAttribute="trailing" constant="16" id="eYW-wO-hKR"/>
-                            <constraint firstItem="rxT-BE-iyy" firstAttribute="top" secondItem="O8R-zE-nXl" secondAttribute="bottom" constant="16" id="hbh-fZ-gaY"/>
+                            <constraint firstItem="PSS-lv-fEn" firstAttribute="top" secondItem="O8R-zE-nXl" secondAttribute="bottom" constant="16" id="dth-hx-kQD"/>
+                            <constraint firstItem="PSS-lv-fEn" firstAttribute="leading" secondItem="Sev-on-Hsd" secondAttribute="leading" constant="16" id="kLr-05-wHu"/>
+                            <constraint firstItem="WYl-CL-dzK" firstAttribute="top" secondItem="PSS-lv-fEn" secondAttribute="bottom" constant="16" id="zEa-i1-dL3"/>
+                            <constraint firstItem="Sev-on-Hsd" firstAttribute="bottom" secondItem="WYl-CL-dzK" secondAttribute="bottom" constant="32" id="zqO-Sr-KWk"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Sev-on-Hsd"/>
                     </view>
                     <connections>
-                        <outlet property="descriptionLabel" destination="rxT-BE-iyy" id="cKI-RO-6pd"/>
                         <outlet property="keywordLabel" destination="O8R-zE-nXl" id="ZRb-ud-rsV"/>
                         <outlet property="learnMoreButton" destination="WYl-CL-dzK" id="rum-8h-zDE"/>
                         <outlet property="newsImage" destination="nwB-cp-Qbw" id="oyC-Hd-zc0"/>
+                        <outlet property="webView" destination="PSS-lv-fEn" id="9s1-1C-IzT"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QWQ-ER-rx2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3724" y="14.842578710644679"/>
+            <point key="canvasLocation" x="3723.188405797102" y="14.673913043478262"/>
         </scene>
         <!--Profile-->
         <scene sceneID="T8U-QB-Z4T">
@@ -335,6 +337,7 @@
                 <tabBarController storyboardIdentifier="TabBarController" automaticallyAdjustsScrollViewInsets="NO" id="yVA-Cy-790" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="eGW-e4-q6K">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
