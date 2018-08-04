@@ -10,6 +10,7 @@ import UIKit
 import SCLAlertView
 import Parse
 import Eureka
+import SVProgressHUD
 
 class RegistrationViewController: FormViewController {
 
@@ -37,7 +38,7 @@ class RegistrationViewController: FormViewController {
             }
             +++ Section("Profile Information")
             <<< EmailRow(){ row in
-                row.title = "Email Addres"
+                row.title = "Email Address"
                 row.tag = "email"
                 row.placeholder = "AppleFan@email.com"
                 row.add(rule: RuleEmail())
@@ -85,7 +86,9 @@ class RegistrationViewController: FormViewController {
         user.email = requestedEmail
         user["score"] = 0
         
+        SVProgressHUD.show()
         user.signUpInBackground { (success: Bool, error: Error?) in
+            SVProgressHUD.dismiss()
             if (success) {
                 let lc = self.storyboard!.instantiateViewController(withIdentifier: "LoginController")
                 self.present(lc, animated: true, completion: nil)

@@ -18,6 +18,7 @@ class CorrectViewController: UIViewController {
     @IBOutlet weak var learnMoreButton: UIButton!
     @IBOutlet weak var newsImage: UIImageView!
     @IBOutlet weak var webView: UIWebView!
+    @IBOutlet weak var viewCount: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,6 +29,7 @@ class CorrectViewController: UIViewController {
         } else {
             self.newsImage.isHidden = true
         }
+        self.viewCount.text = item.rank
         
 
         // Do any additional setup after loading the view.
@@ -37,7 +39,7 @@ class CorrectViewController: UIViewController {
             learnMoreButton.isHidden = true
         }
         
-        let html = "<html><head><title></title></head><body style=\"background:transparent;\">\(item.description)</body></html>"
+        let html = "<html><head><title></title></head><body style=\"background:transparent;\"><font size='5'>\(item.description)<></body></html>"
         webView.backgroundColor = .clear
         webView.loadHTMLString(html, baseURL: nil)
         
