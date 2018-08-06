@@ -41,7 +41,6 @@ class NewsItemXMLDelegate : NSObject, XMLParserDelegate {
         // We know we ended an element.
         
         if elementName == itemTag {
-            // What to do here!?
             results.append(NewsItem(dict: currentDictionary!))
             currentDictionary = nil
         }

@@ -64,9 +64,9 @@ class QuestionController: UIViewController {
                  self.navigationController?.pushViewController(nextViewController, animated: true)
             } else {
                SCLAlertView().showError("Incorrect", subTitle: "Oops! That's not the trending answer.")
-                let user = PFUser.current()!
-                let current = user["score"] as! Int
-                user["score"] = current - 1
+                guard let user = PFUser.current() else { return }
+                guard let currentScore = user["score"] as? Int else { return }
+                user["score"] = currentScore - 1
                 user.saveEventually()
             }
             

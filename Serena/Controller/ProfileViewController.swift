@@ -35,17 +35,17 @@ class ProfileViewController: FormViewController {
                 if let getScore = PFUser.current()?["score"] as? Int {
                     row.value = String(getScore)
                 } else {
-                    row.value = "Unknown"
+                    row.value = "None"
                 }
                 row.tag = "score"
             }
             <<< LabelRow() { row in
                 row.title = "Username"
-                row.value = PFUser.current()!.username!
+                row.value = PFUser.current()?.username ?? "Unknown"
             }
             <<< LabelRow() { row in
                 row.title = "Email"
-                row.value = PFUser.current()!.email ?? ""
+                row.value = PFUser.current()?.email ?? "Unknown"
             }
             <<< ButtonRow(){ row in
                 row.title = "Log Out"
