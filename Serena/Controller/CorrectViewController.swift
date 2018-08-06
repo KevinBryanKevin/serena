@@ -13,6 +13,7 @@ import Parse
 class CorrectViewController: UIViewController {
 
     var item: NewsItem!
+    var informationOnly: Bool!
     
     @IBOutlet weak var keywordLabel: UILabel!
     @IBOutlet weak var learnMoreButton: UIButton!
@@ -29,6 +30,10 @@ class CorrectViewController: UIViewController {
         } else {
             self.newsImage.isHidden = true
         }
+        if (informationOnly) {
+            self.viewCount.isHidden = true
+            self.learnMoreButton.isHidden = true
+        }
         self.viewCount.text = item.rank
         
 
@@ -39,10 +44,13 @@ class CorrectViewController: UIViewController {
             learnMoreButton.isHidden = true
         }
         
-        let html = "<html><head><title></title></head><body style=\"background:transparent;\"><font size='5'>\(item.description)<></body></html>"
+        let html = "<html><head><title></title></head><body style='background:transparent;'><font size='5'>\(item.description)</font></body></html>"
         webView.backgroundColor = .clear
+        webView.isOpaque = false
         webView.loadHTMLString(html, baseURL: nil)
-        
+        if informationOnly {
+            return
+        }
         updateCurrentUser()
         
     }
@@ -53,6 +61,7 @@ class CorrectViewController: UIViewController {
         user["score"] = currentScore + 1
         user.saveEventually()
     }
+
 
     @IBAction func learnMoreTapped(_ sender: Any) {
         if let url: String = item.url {

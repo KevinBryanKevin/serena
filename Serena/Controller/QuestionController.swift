@@ -9,6 +9,7 @@
 import UIKit
 import SCLAlertView
 import SVProgressHUD
+import Parse
 
 class QuestionController: UIViewController {
     
@@ -20,6 +21,15 @@ class QuestionController: UIViewController {
     // This is the tag of the "correct" button.
     var correctTag: Int?
     var correctItem: NewsItem?
+    
+    var options: [NewsItem]?
+    var buttons: [UIButton]?
+    
+    @IBOutlet var buttonViews: [UIView]!
+    
+    // If this is true, we're coming back from an information
+    // only screen.
+    var shouldUpdate: Bool = true
     
     // I will return only the four elements that were chosen.
     func getChoices(originals: [NewsItem]) -> (NewsItem, NewsItem, NewsItem, NewsItem) {
@@ -48,21 +58,48 @@ class QuestionController: UIViewController {
                 let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
                 let nextViewController = storyBoard.instantiateViewController(withIdentifier: "CorrectViewController") as! CorrectViewController
                 
+                self.shouldUpdate = true
                 nextViewController.item = self.correctItem
+                nextViewController.informationOnly = false
                  self.navigationController?.pushViewController(nextViewController, animated: true)
             } else {
                SCLAlertView().showError("Incorrect", subTitle: "Oops! That's not the trending answer.")
+                let user = PFUser.current()!
+                let current = user["score"] as! Int
+                user["score"] = current - 1
+                user.saveEventually()
             }
             
         }
     }
+    @IBAction func infoButtonTapped(_ sender: UIButton) {
+        if options == nil {
+            return
+        }
+        let item = options![sender.tag]
+        
+        let storyBoard = self.storyboard!
+        let nextViewController = storyBoard.instantiateViewController(withIdentifier: "CorrectViewController") as! CorrectViewController
+        
+        nextViewController.item = item
+        nextViewController.informationOnly = true
+        self.navigationController?.pushViewController(nextViewController, animated: true)
+        
+    }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
+        if (!shouldUpdate) {
+            return
+        }
+        shouldUpdate = false
+        
+        buttons = [option1, option2, option3, option4]
         
         SVProgressHUD.show(withStatus: "Fetching...")
         NewsItem.fetchTrendingNews(callback: {(news: [NewsItem], errorMsg: String?) in
             let (item1, item2, item3, item4) = self.getChoices(originals: news)
+            self.options = [item1, item2, item3, item4]
             
             var maxItem: NewsItem = item1
             for (tag, item) in [item1, item2, item3, item4].enumerated() {
@@ -75,10 +112,13 @@ class QuestionController: UIViewController {
     
             DispatchQueue.main.async {
                     SVProgressHUD.dismiss()
-                self.option1.setTitle(item1.title, for: UIControlState.normal)
-                self.option2.setTitle(item2.title, for: UIControlState.normal)
-                self.option3.setTitle(item3.title, for: UIControlState.normal)
-                self.option4.setTitle(item4.title, for: UIControlState.normal)
+                
+                for i in 0..<self.buttons!.count {
+                    self.buttons![i].titleLabel?.numberOfLines = 1;
+                   self.buttons![i].titleLabel?.adjustsFontSizeToFitWidth = true;
+                    self.buttons![i].titleLabel?.lineBreakMode = .byClipping
+                    self.buttons![i].setTitle(self.options![i].title, for: UIControlState.normal)
+                }
             }
         })
         
@@ -90,6 +130,11 @@ class QuestionController: UIViewController {
     }
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        for view in buttonViews {
+            view.layer.cornerRadius = 10
+            view.layer.masksToBounds = true
+        }
     }
 
     override func didReceiveMemoryWarning() {

@@ -16,6 +16,7 @@ class ProfileViewController: FormViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        tableView.backgroundColor = UIColor(displayP3Red: 197.0/255.0, green: 246.0/255.0, blue: 243.0/255.0, alpha: 1.0)
         
         form +++ Section("Settings")
             <<< SegmentedRow<String>() { row in
@@ -28,6 +29,24 @@ class ProfileViewController: FormViewController {
                     }
                 })
             +++ Section("Account")
+            <<< LabelRow() { row in
+                row.title = "Score"
+                
+                if let getScore = PFUser.current()?["score"] as? Int {
+                    row.value = String(getScore)
+                } else {
+                    row.value = "Unknown"
+                }
+                row.tag = "score"
+            }
+            <<< LabelRow() { row in
+                row.title = "Username"
+                row.value = PFUser.current()!.username!
+            }
+            <<< LabelRow() { row in
+                row.title = "Email"
+                row.value = PFUser.current()!.email ?? ""
+            }
             <<< ButtonRow(){ row in
                 row.title = "Log Out"
                 row.onCellSelection({ (cell: ButtonCellOf<String>, button: ButtonRow) in
@@ -60,6 +79,17 @@ class ProfileViewController: FormViewController {
         }
         
         // Do any additional setup after loading the view.
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        let labelRow: LabelRow = form.rowBy(tag: "score")!
+        if let score = PFUser.current()?["score"] as? Int {
+            labelRow.value = String(score)
+        } else {
+            labelRow.value = "Invalid"
+        }
+        labelRow.reload()
     }
 
     override func didReceiveMemoryWarning() {
