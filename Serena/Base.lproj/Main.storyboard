@@ -503,7 +503,7 @@
         <scene sceneID="rY6-Cn-kh5">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="qOe-cJ-o4l" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Settings" selectedImage="setting" id="DAo-EF-aUe"/>
+                    <tabBarItem key="tabBarItem" title="Settings" image="setting" selectedImage="setting" id="DAo-EF-aUe"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="fFD-ej-Zjx">
                         <rect key="frame" x="0.0" y="20" width="414" height="44"/>
@@ -522,7 +522,7 @@
     <resources>
         <image name="information" width="233" height="233"/>
         <image name="logo" width="341" height="341"/>
-        <image name="question" width="16" height="16"/>
-        <image name="setting" width="16" height="16"/>
+        <image name="question" width="28" height="28"/>
+        <image name="setting" width="28" height="28"/>
     </resources>
 </document>
