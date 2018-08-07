@@ -86,15 +86,11 @@ class LoginController: UIViewController {
     }
     
     @IBAction func loginTapped(_ sender: Any) {
-        // Check the login?
         guard let username = usernameLogin.text else {
             SCLAlertView().showError("Missing Field", subTitle: "Username is required!")
-            
-            
             return
         }
         guard let password = passwordLogin.text else {
-            // Alert the user that they need a password
             SCLAlertView().showError("Missing Field", subTitle: "Password is required!")
             return
         }

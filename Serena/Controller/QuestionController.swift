@@ -53,7 +53,11 @@ class QuestionController: UIViewController {
         let button = sender as! UIButton
         if let correct = self.correctTag {
             if button.tag == correct {
-                SCLAlertView().showSuccess("Correct!", subTitle: "Great job! You're a genius :)")
+                var subTitle = "Great job! You're a genious :)"
+                if let currentScore = PFUser.current()?["score"] as? Int {
+                    subTitle = "\(subTitle) Your score is now \(currentScore + 1)."
+                }
+                SCLAlertView().showSuccess("Correct!", subTitle: subTitle)
             
                 let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
                 let nextViewController = storyBoard.instantiateViewController(withIdentifier: "CorrectViewController") as! CorrectViewController
@@ -63,7 +67,11 @@ class QuestionController: UIViewController {
                 nextViewController.informationOnly = false
                  self.navigationController?.pushViewController(nextViewController, animated: true)
             } else {
-               SCLAlertView().showError("Incorrect", subTitle: "Oops! That's not the trending answer.")
+                var subTitle = "Oops! That's not the trending answer."
+                if let currentScore = PFUser.current()?["score"] as? Int {
+                    subTitle = "\(subTitle) Your score is now \(currentScore - 1)."
+                }
+                SCLAlertView().showError("Incorrect", subTitle: subTitle)
                 guard let user = PFUser.current() else { return }
                 guard let currentScore = user["score"] as? Int else { return }
                 user["score"] = currentScore - 1
