@@ -53,7 +53,7 @@ class QuestionController: UIViewController {
         let button = sender as! UIButton
         if let correct = self.correctTag {
             if button.tag == correct {
-                var subTitle = "Great job! You're a genious :)"
+                var subTitle = "Great job! You're a genius :)"
                 if let currentScore = PFUser.current()?["score"] as? Int {
                     subTitle = "\(subTitle) Your score is now \(currentScore + 1)."
                 }
